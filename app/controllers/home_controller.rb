@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :set_home, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_user
 
   # GET /homes
   # GET /homes.json

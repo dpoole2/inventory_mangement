@@ -1,5 +1,16 @@
-<h1>New Session</h1>
 
-<%= render 'form', session: @session %>
-
-<%= link_to 'Back', sessions_path %>
+<div class="container">
+    <h1>Login</h1>
+        <%= form_tag sessions_path do %>
+        <div class="row">
+          <div class="col-xs-12"><%= email_field_tag :email, nil, placeholder: "Email", type: "email"%></div>
+        </div><br>
+        <div class="row">
+          <div class="col-xs-12"><%= password_field_tag :password, nil, placeholder: "Password"%></div>
+        </div><br>
+        <div class="row">
+          <%= submit_tag "Login"%>
+        </div>
+        <% end %>
+        <%= link_to "Sign up", new_user_path %>
+  </div>
