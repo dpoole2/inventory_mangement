@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :orders
+  resources :menu_items
+  resources :items
   resources :users
   resources :sessions
   get "log_in" => "sessions#new"
