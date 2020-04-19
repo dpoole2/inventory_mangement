@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with(model: order, local: true) do |form| %>
   <% if order.errors.any? %>
     <div id="error_explanation">
@@ -11,12 +12,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :total %>
-    <%= form.number_field :total %>
-  </div>
+  <%= form.nested_fields_for :menu_items, @order.menu_items.new do |f| %>
+    <div class="row">
+      <div class="col-xs-12"><%= f.remove_nested_fields_link 'x', class: 'btn btn-primary brand-button new', role: 'button' %></div>
+    </div>
+    <div class="row">
+      <%= form.select :menu_item, options_for_select(menu_items), {:include_blank => true} %>
+    </div>
+  <% end %>
+
+  <%= form.add_nested_fields_link :menu_items, "+", class: "btn btn-primary brand-button player new", role: 'button' %></div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
