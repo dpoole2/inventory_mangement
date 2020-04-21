@@ -12,16 +12,16 @@
     </div>
   <% end %>
 
-  <%= form.nested_fields_for :menu_items, @order.menu_items.new do |f| %>
+  <%= form.nested_fields_for :order_items, @order.order_items.new do |f| %>
     <div class="row">
       <div class="col-xs-12"><%= f.remove_nested_fields_link 'x', class: 'btn btn-primary brand-button new', role: 'button' %></div>
     </div>
     <div class="row">
-      <%= form.select :menu_item, options_for_select(menu_items), {:include_blank => true} %>
+      <%= f.select :menu_item_id, options_for_select(menu_items), {:include_blank => true} %>
     </div>
   <% end %>
 
-  <%= form.add_nested_fields_link :menu_items, "+", class: "btn btn-primary brand-button player new", role: 'button' %></div>
+  <%= form.add_nested_fields_link :order_items, "+", class: "btn btn-primary brand-button player new", role: 'button' %></div>
 
   <div class="actions">
     <%= form.submit %>

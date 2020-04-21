@@ -1,5 +1,6 @@
 class MenuItem < ApplicationRecord
     has_many :ingredients
+    belongs_to :order_item
     has_many :items, :through => :ingredients
 
     def create_ingredients(items)

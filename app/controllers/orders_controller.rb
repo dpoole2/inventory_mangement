@@ -25,6 +25,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    debugger
     @order = Order.new(order_params)
 
     respond_to do |format|
@@ -70,6 +71,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:total)
+      params.require(:order).permit(:total,:order_items, order_items_attributes: [:id, :order_item, :menu_item_id])
     end
 end
