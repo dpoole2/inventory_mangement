@@ -13,11 +13,10 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <% order.menu_items.each do |item| %>
-        <td><%= item.name %></td>
+        <% order_items(order.id).each do |item| %>
+        <td><%= MenuItem.find(item.menu_items_id).name %></td>
         <%end%>
         <td><%= order.total %></td>
-
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
