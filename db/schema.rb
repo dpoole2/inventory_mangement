@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_04_19_004342) do
 
   create_table "order_items", force: :cascade do |t|
     t.text "note"
-    t.bigint "menu_item_id"
+    t.bigint "menu_items_id"
     t.bigint "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
