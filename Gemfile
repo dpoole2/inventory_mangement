@@ -34,7 +34,8 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'bootstrap-select-rails'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'bootstrap-sass'
-
+gem 'bootstrap-datepicker-rails'
+gem 'writeexcel'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

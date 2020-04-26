@@ -1,4 +1,10 @@
-<%= form_with url: revenue_report_url, method: "post" do |form| %>
-<div class="col-md-1"><%= form.label "From:"%></div>
-<div class="col-md-4"><%= form.text_field :date_from, class: "datepicker form-control", :required => true%></div>
-<%end%>
+<div class="container">
+    <h1>Filter Report</h1>
+    <%= form_with url: generate_report_url, method: "post" do |form| %>
+        <div class="col-md-1"><%= form.label "to:"%></div>
+        <div class="col-md-4"><%= form.date_field :date_to, class: "datepicker form-control", :required => true%></div>
+        <div class="col-md-1"><%= form.label "From:"%></div>
+        <div class="col-md-4"><%= form.date_field :date_from, class: "datepicker form-control", :required => true%></div><br>
+        <%= form.submit "Generate Report"%>
+    <%end%>
+</div>

@@ -16,5 +16,6 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require bootstrap-datetimepicker
 //= require nested_form_fields
 //= require_tree .

@@ -3,7 +3,11 @@ class ReportsController < ApplicationController
 
 
   def revenue_report
-    @report = Report.new
+  
+  end
+
+  def generate_report
+    Report.revenue_report(params[:date_to], params[:date_from])
   end
 
   
