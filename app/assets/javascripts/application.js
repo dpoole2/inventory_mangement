@@ -18,4 +18,6 @@
 //= require bootstrap-sprockets
 //= require bootstrap-datetimepicker
 //= require nested_form_fields
+//= require chartkick
+//= require Chart.bundle
 //= require_tree .
