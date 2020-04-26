@@ -1,1 +1,13 @@
 <center><h1>Home</h1></center>
+<div class="row">
+    <div class="col-md-8">
+
+    </div>
+    <div class="col-md-4">
+        <div class="recent-orders">
+           <%recent_orders.each do |order| %>
+           <%= order.total %>
+           <% end %>
+        </div>
+    </div>
+</div>

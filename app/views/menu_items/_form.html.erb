@@ -10,7 +10,7 @@
   </div>
 
   <div class="field">
-    <%= form.select :items, options_for_select(item_select), {:include_blank => true}, { :multiple => true, :size => 5 } %>
+    <%= form.select :items, options_for_select(item_select), {:include_blank => false}, {class: 'ms-container', :multiple => true, :size => 5 } %>
   </div>
 
   <div class="actions">
