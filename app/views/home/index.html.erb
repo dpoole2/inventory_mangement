@@ -3,7 +3,6 @@
     <div class="col-md-8">
         <%= link_to "Revenue Report", revenue_report_path%>
     </div>
-    <%= line_chart MenuItem.all.group_by_day(:created_at).count %>
 
     <div class="col-md-4">
         <div class="recent-orders">

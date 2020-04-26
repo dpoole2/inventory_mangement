@@ -10,6 +10,11 @@ class ReportsController < ApplicationController
     Report.revenue_report(params[:date_to], params[:date_from])
   end
 
+  def weekly_report
+    @items = OrderItem.items_map
+    @item_count = Item.item_count
+  end
+
   
   def create
     @report = Report.new(report_params)
