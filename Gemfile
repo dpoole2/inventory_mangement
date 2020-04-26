@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'momentjs-rails', '>= 2.9.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,18 +24,17 @@ gem 'nested_form_fields'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap'
-gem 'bootstrap-multiselect-rails'
 
-# Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+#bootstrap
+gem 'bootstrap', '~> 4.4.1'
+gem 'bootstrap-select-rails'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+gem 'bootstrap-sass'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

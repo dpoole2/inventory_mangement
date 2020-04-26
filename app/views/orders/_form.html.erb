@@ -1,17 +1,5 @@
 <div class="container">
 <%= form_with(model: order, local: true) do |form| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
-      <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <%= form.nested_fields_for :order_items, @order.order_items.new do |f| %>
     <div class="row">
       <div class="col-xs-12"><%= f.remove_nested_fields_link 'x', class: 'btn btn-primary brand-button new', role: 'button' %></div>
@@ -20,11 +8,9 @@
       <%= f.select :menu_items_id, options_for_select(menu_items), {:include_blank => true} %>
     </div>
   <% end %>
-
-  <%= form.add_nested_fields_link :order_items, "+", class: "btn btn-primary brand-button player new", role: 'button' %></div>
-
+  <%= form.add_nested_fields_link :order_items, "+", class: "btn btn-primary brand-button player new", role: 'button' %>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "hey" %>
   </div>
 <% end %>
 </div>

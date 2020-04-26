@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_19_004342) do
+ActiveRecord::Schema.define(version: 2020_04_26_024028) do
 
   create_table "ingredients", force: :cascade do |t|
     t.bigint "menu_item_id"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 2020_04_19_004342) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.binary "data"
+    t.string "report_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
