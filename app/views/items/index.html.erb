@@ -1,33 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Items</h1>
+<div class="container">
+  <div class="py-5 text-center">
+    <h1>Items</h1>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>Food</th>
-      <th>Cost per unit</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Food</th>
+          <th scope="col">Cost per unit</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.amount %></td>
-        <td><%= item.food %></td>
-        <td><%= item.cost_per_unit %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Item', new_item_path %>
+      <tbody>
+        <% @items.each do |item| %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.amount %></td>
+            <td><%= item.food %></td>
+            <td><%= item.cost_per_unit %></td>
+            <td><%= link_to 'Show', item %></td>
+            <td><%= link_to 'Edit', edit_item_path(item) %></td>
+            <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <div class="row">
+  <%= link_to 'New Item', new_item_path %>
+  </div>
+</div>

@@ -1,12 +1,16 @@
 <%= form_with(model: menu_item, local: true) do |form| %>
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <div class="border">
+      <%= form.text_field :name %>
+    </div>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <div class="border">
+      <%= form.number_field :price %>
+    </div>
   </div>
 
   <div class="field">

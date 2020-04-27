@@ -19,8 +19,44 @@
 
  @import "bootstrap";
 
+ .html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+}
 
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+}
 
+.pb-1, .py-1 {
+  padding-top: .25rem!important;
+  padding-bottom: .25rem!important;
+}
+
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+
+ .a {
+  text-decoration: none;
+  background-color: transparent;
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:-webkit-any-link{
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+  }
+ }
  .recent-orders {
    border: medium;
    border-color: black;

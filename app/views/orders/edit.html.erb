@@ -1,6 +1,18 @@
-<h1>Editing Order</h1>
-
-<%= render 'form', order: @order %>
-
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4 mx-auto">
+            <h1>Editing Order</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+            <%= render 'form', order: @order %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+            <%= link_to 'Show', @order %>  |
+            <%= link_to 'Back', orders_path %>
+        </div>
+    </div>
+</div>

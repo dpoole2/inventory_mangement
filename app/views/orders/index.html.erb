@@ -1,30 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Orders</h1>
+<div class="container">
+  <div class="py-5 text-center">
+    <h1>Orders</h1>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Total</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @orders.each do |order| %>
+  <div class="row">
+  <table class="table">
+    <thead>
       <tr>
-        <% order_items(order.id).each do |item| %>
-        <td><%= MenuItem.find(item.menu_items_id).name %></td>
-        <%end%>
-        <td><%= order.total %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th scope="col">Total</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <% order_items(order.id).each do |item| %>
+          <td><%= MenuItem.find(item.menu_items_id).name %></td>
+          <%end%>
+          <td><%= order.total %></td>
+          <td><%= link_to 'Show', order %></td>
+          <td><%= link_to 'Edit', edit_order_path(order) %></td>
+          <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Order', new_order_path %>
+  <br>
+  <div class="row">
+    <%= link_to 'New Order', new_order_path %>
+  </div>
+</div>

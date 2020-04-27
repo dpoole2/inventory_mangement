@@ -1,19 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @menu_item.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @menu_item.price %>
-</p>
-
-<p>
-  <strong>Order:</strong>
-  <%= @menu_item.order_id %>
-</p>
-
-<%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
-<%= link_to 'Back', menu_items_path %>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4 mx-auto">
+            <p id="notice"><%= notice %></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">            
+          <p>
+            <strong>Name:</strong>
+            <%= @menu_item.name %>
+          </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+            <p>
+            <strong>Price:</strong>
+            <%= @menu_item.price %>
+          </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+            <p>
+            <strong>Order:</strong>
+            <%= @menu_item.order_id %>
+          </p>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-4 mx-auto">
+          <%= link_to 'Edit', edit_item_path(@menu_item) %>  |
+          <%= link_to 'Back', menu_items_path %>
+          </div>
+          </div>
+</div>
