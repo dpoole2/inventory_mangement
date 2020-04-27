@@ -1,18 +1,17 @@
-
 <div class="container">
-  <div class="box col-lg">
-    <h1>Login</h1>
+  <div class="col-5 mx-auto mt-5">
+    <body class="text-center">
+      <form class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <%= form_tag sessions_path do %>
-        <div class="row">
-          <div class="col-xs-12"><%= email_field_tag :email, nil, placeholder: "Email", type: "email"%></div>
-        </div><br>
-        <div class="row">
-          <div class="col-xs-12"><%= password_field_tag :password, nil, placeholder: "Password"%></div>
-        </div><br>
-        <div class="row">
+          <div class="col-xs-12 my-3"><%= email_field_tag :email, nil, placeholder: "Email", type: "email"%></div>
+          <div class="col-xs-12 my-3"><%= password_field_tag :password, nil, placeholder: "Password"%></div>
           <%= submit_tag "Login"%>
-        </div>
         <% end %>
-        <%= link_to "Sign up", new_user_path %>
+        <div class="my-3">
+          <%= link_to "Sign up", new_user_path %>
+        </div>
+      </form>
+    </body>
   </div>
 </div>
