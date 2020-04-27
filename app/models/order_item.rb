@@ -15,4 +15,15 @@ class OrderItem < ApplicationRecord
     end
  end
 
+
+def self.items_map
+   items = OrderItem.where("created_at > ? AND created_at < ?", Date.today.beginning_of_week + 23.hours ,Date.today.end_of_week+ 23.hours).group(:menu_items_id).count
+   result = {}
+   items.each do |key, value|
+      result[MenuItem.find_by(id: key).name] = value
+   end
+   result
+end
+
+
 end

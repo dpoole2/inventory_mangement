@@ -5,6 +5,9 @@ ruby '2.6.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
+gem "chartkick"
+gem 'groupdate'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -34,7 +37,8 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'bootstrap-select-rails'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'bootstrap-sass'
-
+gem 'bootstrap-datepicker-rails'
+gem 'writeexcel'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
