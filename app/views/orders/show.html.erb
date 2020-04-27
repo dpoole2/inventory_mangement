@@ -1,9 +1,26 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Total:</strong>
-  <%= @order.total %>
-</p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4 mx-auto">
+            <p id="notice"><%= notice %></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">            
+          <p>
+            <strong>Total:</strong>
+            <%= @order.total %>
+          </p>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-4 mx-auto">
+          <%= link_to 'Edit', edit_order_path(@order) %>  |
+          <%= link_to 'Back', orders_path %>
+          </div>
+          </div>
+</div>

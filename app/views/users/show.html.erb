@@ -1,29 +1,53 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>String:</strong>
-  <%= @user.string %>
-</p>
-
-<p>
-  <strong>String:</strong>
-  <%= @user.string %>
-</p>
-
-<p>
-  <strong>String:</strong>
-  <%= @user.string %>
-</p>
-
-<p>
-  <strong>String:</strong>
-  <%= @user.string %>
-</p>
-
-<p>
-  <strong>Boolean:</strong>
-  <%= @user.boolean %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4 mx-auto">
+            <p id="notice"><%= notice %></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">            
+          <p>
+            <strong>String:</strong>
+            <%= @user.string %>
+          </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+            <p>
+              <strong>String:</strong>
+              <%= @user.string %>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+            <p>
+              <strong>String:</strong>
+              <%= @user.string %>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+          <p>
+            <strong>String:</strong>
+            <%= @user.string %>
+          </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+          <p>
+            <strong>Boolean:</strong>
+            <%= @user.boolean %>
+          </p>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-4 mx-auto">
+          <%= link_to 'Edit', edit_user_path(@user) %>  |
+          <%= link_to 'Back', users_path %>
+        </div>
+      </div>
+</div>

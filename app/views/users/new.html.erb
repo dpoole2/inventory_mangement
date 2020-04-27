@@ -1,5 +1,17 @@
-<h1>New User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', users_path %>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4 mx-auto">
+            <h1>New User</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+            <%= render 'form', user: @user %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+        <%= link_to 'Back', users_path %>
+        </div>
+    </div>
+</div>
