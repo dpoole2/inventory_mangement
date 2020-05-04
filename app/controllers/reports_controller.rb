@@ -10,6 +10,10 @@ class ReportsController < ApplicationController
     Report.revenue_report(params[:date_to], params[:date_from])
   end
 
+  def download
+    send_data Report.last.data, :disposition => 'inline', :filename => 'report.xls'
+  end
+
   def weekly_report
     @items = OrderItem.items_map
     @item_count = Item.item_count

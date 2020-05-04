@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get "revenue_report" => "reports#revenue_report"
   post "generate_report" => "reports#generate_report"
   get "weekly_report" => "reports#weekly_report"
+  get "download" => "reports#download"
+  get "log_out" => "sessions#destroy"
+  post "log" => "sessions#create"
   root :to => "home#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
