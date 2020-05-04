@@ -10,7 +10,7 @@ class Item < ApplicationRecord
         result
     end
     
-    def unit
+    def self.unit
         result = ['Ounce', 'Cup', 'Liter', 'Gram', 'Kilogram', 'Pound', 'Fluid ounce', 'Teaspoon', 'Tablespoon']
         result 
     end
